@@ -1,19 +1,83 @@
 package org.example;
 
+import java.util.Scanner;
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
+
 public class Main {
+    public static double add(double a,double b){
+        double c=a+b;
+        System.out.println(a + " + " + b + " = " + c );
+        return c;
+    }
+    public static double sub(double a,double b){
+        double c=a-b;
+        System.out.println(a + " - " + b + " = " + c );
+        return c;
+    }
+    public static double mul(double a,double b){
+        double c=a*b;
+        System.out.println(a + " X " + b + " = " + c );
+        return c;
+    }
+    public static double div(double a,double b){
+        if(b == 0) {
+            System.out.println("Cannot divide by zero");
+            //if b == 0 then no value determinable, used zero to catch a failure.
+            return 0;
+        }
+        else {
+            double c=a/b;
+            System.out.println(a + " / " + b + " = " + c);
+            return c;
+        }
+    }
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
-
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
-
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+8.
-            System.out.println("i = " + i);
+        int mode=0;
+        Scanner s=new Scanner(System.in);
+        double a=0,b=0,c1=0;
+        while(mode != 5){
+            System.out.println("1. Addition");
+            System.out.println("2. Subtraction");
+            System.out.println("3. Multiplication");
+            System.out.println("4. Division");
+            System.out.println("5. Exit");
+            System.out.println("Enter the mode of calculation:");
+            mode = s.nextInt();
+            switch(mode){
+                case 1:
+                    System.out.println("Enter 1st number:");
+                    a=s.nextDouble();
+                    System.out.println("Enter 2nd number:");
+                    b=s.nextDouble();
+                    c1=add(a,b);
+                    break;
+                case 2:
+                    System.out.println("Enter 1st number:");
+                    a=s.nextDouble();
+                    System.out.println("Enter 2nd number:");
+                    b=s.nextDouble();
+                    c1=sub(a,b);
+                    break;
+                case 3:
+                    System.out.println("Enter 1st number:");
+                    a=s.nextDouble();
+                    System.out.println("Enter 2nd number:");
+                    b=s.nextDouble();
+                    c1=mul(a,b);
+                    break;
+                case 4:
+                    System.out.println("Enter 1st number/dividend:");
+                    a=s.nextDouble();
+                    System.out.println("Enter 2nd number/divisor:");
+                    b=s.nextDouble();
+                    c1=div(a,b);
+                    break;
+                case 5:
+                    System.out.println("Exiting. Thank you.");
+                default:
+                    System.out.println("Please enter valid input!");
+            }
         }
     }
 }
