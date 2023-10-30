@@ -36,7 +36,7 @@ public class Main {
         int mode=0;
         Scanner s=new Scanner(System.in);
         double a=0,b=0,c1=0;
-        System.out.println("Welcome to Calculator App");
+        System.out.println("Welcome to Calculator App.");
         System.out.println(" ");
         while(mode != 5){
             System.out.println("1. Addition");
