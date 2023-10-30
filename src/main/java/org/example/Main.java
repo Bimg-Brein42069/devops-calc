@@ -44,37 +44,47 @@ public class Main {
             System.out.println("5. Exit");
             System.out.println("Enter the mode of calculation:");
             mode = s.nextInt();
-            switch(mode){
+            System.out.println(" ");
+            switch(mode) {
                 case 1:
                     System.out.println("Enter 1st number:");
-                    a=s.nextDouble();
+                    a = s.nextDouble();
                     System.out.println("Enter 2nd number:");
-                    b=s.nextDouble();
-                    c1=add(a,b);
+                    b = s.nextDouble();
+                    System.out.println(" ");
+                    c1 = add(a, b);
+                    System.out.println(" ");
                     break;
                 case 2:
                     System.out.println("Enter 1st number:");
-                    a=s.nextDouble();
+                    a = s.nextDouble();
                     System.out.println("Enter 2nd number:");
-                    b=s.nextDouble();
-                    c1=sub(a,b);
+                    b = s.nextDouble();
+                    System.out.println(" ");
+                    c1 = sub(a, b);
+                    System.out.println(" ");
                     break;
                 case 3:
                     System.out.println("Enter 1st number:");
-                    a=s.nextDouble();
+                    a = s.nextDouble();
                     System.out.println("Enter 2nd number:");
-                    b=s.nextDouble();
-                    c1=mul(a,b);
+                    b = s.nextDouble();
+                    System.out.println(" ");
+                    c1 = mul(a, b);
+                    System.out.println(" ");
                     break;
                 case 4:
                     System.out.println("Enter 1st number/dividend:");
-                    a=s.nextDouble();
+                    a = s.nextDouble();
                     System.out.println("Enter 2nd number/divisor:");
-                    b=s.nextDouble();
-                    c1=div(a,b);
+                    b = s.nextDouble();
+                    System.out.println(" ");
+                    c1 = div(a, b);
+                    System.out.println(" ");
                     break;
                 case 5:
                     System.out.println("Exiting. Thank you.");
+                    break;
                 default:
                     System.out.println("Please enter valid input!");
             }
