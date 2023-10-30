@@ -13,4 +13,4 @@
       name: docker
       state: started
   - name: Running Container
-    shell: docker run -it -d --name Calculator dspani/devcalc:latest
+    shell: docker run -it -d --name Calculator dspani/devcalc
