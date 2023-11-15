@@ -7,28 +7,48 @@ import java.util.Scanner;
 public class Main {
     public static double add(double a,double b){
         double c=a+b;
-        System.out.println(a + " + " + b + " = " + c );
+        if(c == Double.POSITIVE_INFINITY)
+            System.out.println("Value too large!!");
+        else if(c == Double.NEGATIVE_INFINITY)
+            System.out.println("Value too small!!");
+        else
+            System.out.println(a + " + " + b + " = " + c );
         return c;
     }
     public static double sub(double a,double b){
         double c=a-b;
-        System.out.println(a + " - " + b + " = " + c );
+        if(c == Double.POSITIVE_INFINITY)
+            System.out.println("Value too large!!");
+        else if(c == Double.NEGATIVE_INFINITY)
+            System.out.println("Value too small!!");
+        else
+            System.out.println(a + " - " + b + " = " + c );
         return c;
     }
     public static double mul(double a,double b){
         double c=a*b;
-        System.out.println(a + " X " + b + " = " + c );
+        if(c == Double.POSITIVE_INFINITY)
+            System.out.println("Value too large!!");
+        else if(c == Double.NEGATIVE_INFINITY)
+            System.out.println("Value too small!!");
+        else
+            System.out.println(a + " X " + b + " = " + c );
         return c;
     }
     public static double div(double a,double b){
         if(b == 0) {
-            System.out.println("Cannot divide by zero");
+            System.out.println("Cannot divide by zero!!");
             //if b == 0 then no value determinable, used zero to catch a failure.
             return 0;
         }
         else {
             double c=a/b;
-            System.out.println(a + " / " + b + " = " + c);
+            if(c == Double.POSITIVE_INFINITY)
+                System.out.println("Value too large!!");
+            else if(c == Double.NEGATIVE_INFINITY)
+                System.out.println("Value too small!!");
+            else
+                System.out.println(a + " / " + b + " = " + c);
             return c;
         }
     }
